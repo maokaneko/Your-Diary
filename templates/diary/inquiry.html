@@ -1,0 +1,37 @@
+{% extends 'diaryapp_base.html' %}
+{% load static %}
+
+{% block title %}お問い合わせ | Private Diary{% endblock %}
+
+{% block active_inquiry %}active{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <!-- 独自css -->
+    <div class="my-div-style">
+        <form action="" method="post">
+
+            {% csrf_token %}
+
+            {{ form.non_field_errors }}
+
+            <!-- formの情報を一つずつ取り出せる -->
+            {% for field in form %}
+            <div class="mb-4 col-4">
+                <!-- idを取得する(.id_for_label) 'as_p'みたいなもの-->
+                <label for="{{ field.id_for_label }}">
+                    <strong>{{ field.label_tag }}</strong>
+                </label>
+                {{ field }}
+                <!-- エラーメッセージを集める(field.error) -->
+                {{ field.error }}
+            </div>
+            {% endfor %}
+
+            <button class="btn btn-primary" type="submit">送信</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

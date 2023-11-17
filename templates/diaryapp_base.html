@@ -22,7 +22,7 @@
     <link href="{% static 'css/diaryapp.css' %}" rel="stylesheet" />
 
     <!-- My style -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/diaryapp_style' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/diaryapp_style.css' %}">
     {% block head %}{% endblock %}
 </head>
 
@@ -38,7 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link {% block active_inquiry %}{% endblock %}" href="#">INQUIRY</a>
+                            <a class="nav-link {% block active_inquiry %}{% endblock %}" href="{% url 'diary_inquiry' %}">投稿</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
