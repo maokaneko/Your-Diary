@@ -1,0 +1,23 @@
+{% extends 'diaryapp_base.html' %}
+
+{% load static %}
+
+{% block title %}日記編集 | Private Diary{% endblock %}
+
+{% block active_diary_list %}active{% endblock %}
+
+{% block contents %}
+<div class="container my-div-style">
+    <div class="row">
+        <!-- ファイルアップロードをフォームで扱う場合(enctype="multipart/form-data) -->
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table class="table">
+                {{ form.as_table }}
+            </table>
+            <button class="btn btn-primary" type="submit">更新</button>
+            <a href="{% url 'diary_detail' object.pk %}" class="btn btn-secondary ml-2">キャンセル</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
