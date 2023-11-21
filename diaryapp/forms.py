@@ -1,5 +1,7 @@
 from django import forms
 
+from .models import Diary
+
 # InquiryForm
 class InquiryForm(forms.Form):
     name = forms.CharField(label='お名前', max_length=30)
@@ -27,3 +29,17 @@ class InquiryForm(forms.Form):
         self.fields['message'].widget.attrs['placeholder'] = 'メッセージをここに入力してください。'
 
 
+
+
+# DiaryCreateForm
+class DiaryCreateForm(forms.ModelForm):
+    class Meta:
+        model = Diary
+        fields = ('title', 'content', 'photo1', 'photo2', 'photo3',)
+
+    # インスタンスを生成した際に、1番最初に呼び出される関数
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            # 全フォームフィールドにBootstrapのform-controlクラスを追加する
+            field.widget.attrs['class'] = 'form-control'
