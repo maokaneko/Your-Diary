@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # 自作のアプリ
     'diaryapp.apps.DiaryappConfig',
     'accounts.apps.AccountsConfig',
+    'top_page.apps.TopPageConfig',
 
     # django-allauth
     'django.contrib.sites',
