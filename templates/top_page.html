@@ -50,8 +50,8 @@
                     <p class="mv-title">MAO KANEKO</p>
                     <p class="mv-subtitle">PORTFOLIO</p>
                     <p class="mv-text">
-                        テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。<br class="sp-only">テキストが入ります<br>
-                        <br class="sp-only">テキストが入ります<br>
+                        <br class="sp-only">ご覧いただきありがとうございます。<br>
+                        <br class="sp-only">下記に私の制作物やスキル、そして自己紹介がありますのでご確認ください。<br>
                     </p>
                 </div>
             </div>
@@ -62,12 +62,15 @@
                 <div class="container">
                     <h2 class="title">WORKS</h2>
                     <div class="works-list">
-                        <a class="works-item" href="works-template.html">
-                            <div class="works-img"><img src="{% static 'images/top/works-sample-thumb.jpg' %}" alt="" />
+
+                        <!-- Your Diary -->
+                        <a class="works-item" href="{% url 'diary_index' %}" target="_blank">
+                            <div class="works-img"><img src="{% static 'images/top/your-diary.jpg' %}" alt="" />
                             </div>
-                            <p class="works-name">作品名が入る</p>
-                            <p class="works-info">Design / Coding(Responsive)</p>
+                            <p class="works-name">Your Diary</p>
+                            <p class="works-info">言語:Python / フレームワーク:Django / データベース:PostgreSQL / フロントエンド:One Page Wonder</p>
                         </a>
+
                         <a class="works-item" href="works-template.html">
                             <div class="works-img"><img src="{% static 'images/top/works-dummy-thumb.jpg' %}" alt="" />
                             </div>
@@ -103,59 +106,66 @@
                     <h2 class="title">SKILL</h2>
                     <div class="skill-list">
                         <div class="skill-item">
-                            <p class="skill-img"><img src="{% static 'images/top/icon_skill.png' %}" alt=""></p>
+                            <p class="skill-img"><img src="{% static 'images/top/python_icon.png' %}" alt="" ></p>
                             <div class="skill-body">
-                                <h3 class="skill-name">HTML5/CSS3</h3>
+                                <h3 class="skill-name">Python</h3>
                                 <p class="skill-text">
-                                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+                                    変数やデータ型、if文、for文、関数などの基礎知識。
+                                </p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <p class="skill-img"><img src="{% static 'images/top/icon_skill.png' %}" alt=""></p>
+                            <p class="skill-img"><img src="{% static 'images/top/html&css_icon.png' %}" alt=""></p>
                             <div class="skill-body">
-                                <h3 class="skill-name">WordPress</h3>
+                                <h3 class="skill-name">HTML & CSS</h3>
                                 <p class="skill-text">
-                                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+                                    タグやリンク、スタイリングやレスポンシブデザインなどを使い、シンプルなwebページを構築できる。
+                                </p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <p class="skill-img"><img src="{% static 'images/top/icon_skill.png' %}" alt=""></p>
-                            <div class="skill-body">
-                                <h3 class="skill-name">JavaScript</h3>
-                                <p class="skill-text">
-                                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <p class="skill-img"><img src="{% static 'images/top/icon_skill.png' %}" alt=""></p>
-                            <div class="skill-body">
-                                <h3 class="skill-name">Photoshop</h3>
-                                <p class="skill-text">
-                                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <p class="skill-img"><img src="{% static 'images/top/icon_skill.png' %}" alt=""></p>
-                            <div class="skill-body">
-                                <h3 class="skill-name">Illustrator</h3>
-                                <p class="skill-text">
-                                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <p class="skill-img"><img src="{% static 'images/top/icon_skill.png' %}" alt=""></p>
-                            <div class="skill-body">
-                                <h3 class="skill-name">XD</h3>
-                                <p class="skill-text">
-                                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <p class="skill-img"><img src="{% static 'images/top/icon_skill.png' %}" alt=""></p>
+                            <p class="skill-img"><img src="{% static 'images/top/django_icon.png' %}" alt=""></p>
                             <div class="skill-body">
                                 <h3 class="skill-name">Django</h3>
                                 <p class="skill-text">
-                                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+                                    Djangoの基本的なディレクトリ構造、モデル・ビュー・テンプレート(MTV)の概念、URLパターンなどの基礎知識。それらを用いたWEBサイト構築。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p class="skill-img"><img src="{% static 'images/top/javascript_icon.png' %}" alt=""></p>
+                            <div class="skill-body">
+                                <h3 class="skill-name">javascript</h3>
+                                <p class="skill-text">
+                                    基本の文法やDOM操作、イベント処理などの基礎知識。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p class="skill-img"><img src="{% static 'images/top/postgresql_icon.png' %}" alt=""></p>
+                            <div class="skill-body">
+                                <h3 class="skill-name">PostgreSQL</h3>
+                                <p class="skill-text">
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p class="skill-img"><img src="{% static 'images/top/phto&ill_icon.png' %}" alt=""></p>
+                            <div class="skill-body">
+                                <h3 class="skill-name">Photoshop & Illustrator</h3>
+                                <p class="skill-text">
+                                    基本的なツールの使用方法やレイヤーの基本的な操作、基本的な図形の描画と編集などの基本知識。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p class="skill-img"><img src="{% static 'images/top/github_icon.png' %}" alt=""></p>
+                            <div class="skill-body">
+                                <h3 class="skill-name">Git/Github</h3>
+                                <p class="skill-text">
+                                    コマンド（add、commit、push、pullなど）やブランチ、マージ、プルリクエストなどの基礎知識。
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -169,14 +179,14 @@
                     <h2 class="title">ABOUT</h2>
                     <div class="profile">
                         <p class="profile-img">
-                            <img src="{% static 'images/top/profile.jpg' %}" alt="">
+                            <img src="{% static 'images/top/ver4.png' %}" alt="">
                         </p>
                         <div class="profile-body">
                             <p>
-                                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+                                沖縄県出身。趣味は釣り、ゲーム、サッカー観戦。大学卒業後、夢である世界一周を実現するため行動していたが、コロナ禍により一時的にその計画を断念。その後、興味があったwebエンジニアになることを決意し、専門のスクールに通いながら、webアプリ開発の基礎知識を習得しています。
                             </p>
                             <p>
-                                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+
                             </p>
                         </div>
                     </div>
@@ -189,13 +199,13 @@
                 <div class="container">
                     <h2 class="title">CONTACT</h2>
                     <p class="lead">
-                        お問い合わせは、<br class="sp-only">SNSかメールにてお願いいたします。
+                        お問い合わせは、<br class="sp-only">メールにてお願いいたします。
                     </p>
                     <div class="contact-list">
-                        <a class="contact-item" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
+                        <!-- <a class="contact-item" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
                         <a class="contact-item" href="https://www.instagram.com/" target="_blank"
-                            rel="noopener">Instagram</a>
-                        <span class="contact-item">xxxxxx@gmail.com</span>
+                            rel="noopener">Instagram</a> -->
+                        <span class="contact-item">mkch1999@gmail.com</span>
                     </div>
                 </div>
             </section>
