@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
 
     <!-- cssを読み込む -->
-    <link rel="stylesheet" href="{% static 'css/top.css' %}">
     <link rel="stylesheet" href="{% static 'css/top_ress.css' %}">
+    <link rel="stylesheet" href="{% static 'css/top.css' %}">
 
     <!-- アイコンの読み込み -->
     <link rel="shortcut icon" href="{% static 'images/top/favicon.ico' %}" />
@@ -61,8 +61,8 @@
             <section class="works section" id="works">
                 <div class="container">
                     <h2 class="title">WORKS</h2>
+                    <h1 class="">Webアプリ</h2>
                     <div class="works-list">
-
                         <!-- Your Diary -->
                         <a class="works-item" href="{% url 'diary_index' %}" target="_blank">
                             <div class="works-img"><img src="{% static 'images/top/your-diary.jpg' %}" alt="" />
@@ -83,6 +83,10 @@
                             <p class="works-name">作品名が入る</p>
                             <p class="works-info">Design</p>
                         </a>
+                    </div>
+
+                    <h2 class="sub-title">Webデザイン</h2>
+                    <div class="works-list">
                         <a class="works-item" href="works-template.html">
                             <div class="works-img"><img src="{% static 'images/top/works-dummy-thumb.jpg' %}" alt="" />
                             </div>
@@ -146,7 +150,7 @@
                             <div class="skill-body">
                                 <h3 class="skill-name">PostgreSQL</h3>
                                 <p class="skill-text">
-
+                                    リレーショナルデータベース(RDB)やデータベース管理システム (DBMS)についての知識、CREATE TABLE文 やSELECT文などの基本的なSQLの理解と書き方などの基礎知識。
                                 </p>
                             </div>
                         </div>
