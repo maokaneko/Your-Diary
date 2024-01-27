@@ -15,6 +15,7 @@
 
     <!-- cssを読み込む -->
     <link rel="stylesheet" href="{% static 'css/top.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- <link rel="stylesheet" href="{% static 'css/top_ress.css' %}"> -->
 
     <!-- アイコンの読み込み -->
@@ -68,15 +69,15 @@
                             <div class="works-img"><img src="{% static 'images/top/your-diary.jpg' %}" alt="" />
                             </div>
                             <p class="works-name">Your Diary</p>
-                            <p class="works-info">言語:Python / フレームワーク:Django / データベース:PostgreSQL / フロントエンド:One Page
-                                Wonder</p>
+                            <p class="works-info">言語:Python / フレームワーク:Django / データベース:PostgreSQL / フロントエンド:One PageWonder</p>
                         </a>
 
-                        <a class="works-item" href="works-template.html">
-                            <div class="works-img"><img src="{% static 'images/top/works-dummy-thumb.jpg' %}" alt="" />
+                        <a class="works-item" href="https://cgm-app.onrender.com/" target="_blank">
+                            <div class="works-img"><img src="{% static 'images/top/smaple-app.jpg' %}" alt="" />
                             </div>
-                            <p class="works-name">Sample App(Rails チュートリアル)</p>
-                            <p class="works-info">Design / Coding(Responsive) / WordPress</p>
+                            <p class="works-name">Sample App(Rails チュートリアル)
+                            <br>※無料版のRenderサーバーのため読み込みが遅いです</p>
+                            <p class="works-info">言語:Ruby / フレームワーク:Ruby on Rails / データベース:PostgreSQL / フロントエンド:bootstrap</p>
                         </a>
 
                         <!-- <a class="works-item" href="works-template.html">
@@ -169,7 +170,7 @@
                             <div class="skill-body">
                                 <h3 class="skill-name">javascript</h3>
                                 <p class="skill-text">
-                                    基本の文法やDOM操作、イベント処理などの基礎知識。
+                                    ウェブページのDOMを操作し、動的なコンテンツを追加、変更、削除することができます。また、ユーザーのアクションに対応して、クリックや入力などのイベントを検知し、それに対する処理を行うことができます。
                                 </p>
                             </div>
                         </div>
@@ -188,7 +189,7 @@
                             <div class="skill-body">
                                 <h3 class="skill-name">Photoshop & Illustrator</h3>
                                 <p class="skill-text">
-                                    基本的なツールの使用方法やレイヤーの基本的な操作、基本的な図形の描画と編集などの基本知識。
+                                    基本的なツールの使用方法やレイヤーの基本的な操作、基本的な図形の描画と編集などの基本知識。バナー広告の作成やワイヤーフレーム制作。
                                 </p>
                             </div>
                         </div>
@@ -218,9 +219,6 @@
                             <p>
                                 沖縄県出身。趣味は釣り、ゲーム、サッカー観戦。大学卒業後、夢である世界一周を実現するため行動していたが、コロナ禍により一時的にその計画を断念。その後、興味があったwebエンジニアになることを決意し、専門のスクールに通いながら、webアプリ開発の基礎知識やwebデザインの基礎について学んでいます。
                             </p>
-                            <p>
-
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -232,13 +230,23 @@
                 <div class="container">
                     <h2 class="title">CONTACT</h2>
                     <p class="lead">
-                        お問い合わせは、<br class="sp-only">メールにてお願いいたします。
+                        お問い合わせは、<br class="sp-only">こちらからお願いいたします。
                     </p>
                     <div class="contact-list">
-                        <!-- <a class="contact-item" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
-                        <a class="contact-item" href="https://www.instagram.com/" target="_blank"
-                            rel="noopener">Instagram</a> -->
-                        <span class="contact-item">mkch1999@gmail.com</span>
+                        <!-- gmail -->
+                        <a class="contact-item" href="mailto:maokaneko077@gmail.com" target="_blank">
+                            <i class="fa-regular fa-envelope fa-4x" style="color: red; padding-right: 10px;"></i>
+                        </a>
+                        <!-- twitter -->
+                        <a class="contact-item" href="https://twitter.com/JinMo51073" target="_blank">
+                        <i class="fa-brands fa-square-twitter fa-4x" style="color: #74C0FC; padding-right: 10px"></i>
+                        </a>
+                        <!-- github -->
+                        <a class="contact-item" href="https://github.com/maokaneko?tab=repositories" target="_blank">
+                        <i class="fa-brands fa-square-github fa-4x" style="color: #000000; padding-right: 10px"></i>
+                        </a>
+
+                        <!-- <a class="contact-item" href="https://github.com/mistake-git" target="_blank"><img src="{% static 'images/top/github_icon.png' %}"></a> -->
                     </div>
                 </div>
             </section>
