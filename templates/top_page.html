@@ -20,6 +20,55 @@
 
     <!-- アイコンの読み込み -->
     <link rel="shortcut icon" href="{% static 'images/top/favicon.ico' %}" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal-default-theme.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js"></script>
+
+    <style>
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            border: 2px solid #b4b1a0;
+            color: #4c4833;
+            width: 300px;
+            height: 80px;
+            box-sizing: border-box;
+            text-decoration: none;
+            transition-duration: 0.3s;
+        }
+
+        .btn:hover {
+            background: #b4b1a0;
+            color: #ffffff;
+        }
+
+        .remodal {
+            position: relative;
+            padding: 25px;
+        }
+
+        .remodal img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+
+        .remodal-cancel {
+            color: #fff;
+            background: #000000;
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .remodal-cancel:hover {
+            background: #333;
+        }
+    </style>
 </head>
 
 <body style="margin: 0;">
@@ -54,6 +103,22 @@
                         <br class="sp-only">ご覧いただきありがとうございます。<br>
                         <br class="sp-only">下記に私の制作物やスキル、そして自己紹介がありますのでご確認ください。<br>
                     </p>
+                    <div class="contact-list">
+                        <!-- gmail -->
+                        <a class="contact-item" href="mailto:maokaneko077@gmail.com" target="_blank">
+                            <i class="fa-regular fa-envelope fa-4x" style="color: red; padding-right: 10px;"></i>
+                        </a>
+                        <!-- twitter -->
+                        <a class="contact-item" href="https://twitter.com/JinMo51073" target="_blank">
+                            <i class="fa-brands fa-square-twitter fa-4x" style="color: #74C0FC; padding-right: 10px"></i>
+                        </a>
+                        <!-- github -->
+                        <a class="contact-item" href="https://github.com/maokaneko?tab=repositories" target="_blank">
+                            <i class="fa-brands fa-square-github fa-4x" style="color: #000000; padding-right: 10px"></i>
+                        </a>
+
+                        <!-- <a class="contact-item" href="https://github.com/mistake-git" target="_blank"><img src="{% static 'images/top/github_icon.png' %}"></a> -->
+                    </div>
                 </div>
             </div>
             <!-- /mv -->
@@ -69,15 +134,18 @@
                             <div class="works-img"><img src="{% static 'images/top/your-diary.jpg' %}" alt="" />
                             </div>
                             <p class="works-name">Your Diary</p>
-                            <p class="works-info">言語:Python / フレームワーク:Django / データベース:PostgreSQL / フロントエンド:One PageWonder</p>
+                            <p class="works-info">言語:Python / フレームワーク:Django / データベース:PostgreSQL / フロントエンド:One
+                                PageWonder</p>
                         </a>
 
                         <a class="works-item" href="https://cgm-app.onrender.com/" target="_blank">
                             <div class="works-img"><img src="{% static 'images/top/smaple-app.jpg' %}" alt="" />
                             </div>
                             <p class="works-name">Sample App(Rails チュートリアル)
-                            <br>※無料版のRenderサーバーのため読み込みが遅いです</p>
-                            <p class="works-info">言語:Ruby / フレームワーク:Ruby on Rails / データベース:PostgreSQL / フロントエンド:bootstrap</p>
+                                <br>※無料版のRenderサーバーのため読み込みが遅いです
+                            </p>
+                            <p class="works-info">言語:Ruby / フレームワーク:Ruby on Rails / データベース:PostgreSQL /
+                                フロントエンド:bootstrap</p>
                         </a>
 
                         <!-- <a class="works-item" href="works-template.html">
@@ -90,42 +158,85 @@
 
                     <h2 class="sub-title2" style="margin-top: 80px;">Webデザイン</h2>
                     <div class="works-list">
-                        <a class="works-item">
-                            <div class="works-img"><img src="{% static 'images/top/body_soup.jpeg' %}" alt="" />
+
+                        <a class="works-item" href="#modal_01" class="btn">
+                            <div class="works-img">
+                                <div class="remodal" data-remodal-id="modal_01">
+                                    <div><img src="{% static 'images/top/body_soup.jpeg' %}" alt="125naroom">
+                                    </div>
+                                    <button data-remodal-action="cancel" class="remodal-cancel">閉じる</button>
+                                </div>
+                                <img src="{% static 'images/top/body_soup.jpeg' %}" alt="" />
                             </div>
                             <p class="works-name">KLabのボタニカルボディソープ</p>
                             <p class="works-info">Banner Design</p>
                         </a>
-                        <a class="works-item">
-                            <div class="works-img"><img src="{% static 'images/top/ks_burger.jpeg' %}" alt="" />
+
+                        <a class="works-item" href="#modal_02" class="btn">
+                            <div class="works-img">
+                                <div class="remodal" data-remodal-id="modal_02">
+                                    <div><img src="{% static 'images/top/ks_burger.jpeg' %}" alt="125naroom">
+                                    </div>
+                                    <button data-remodal-action="cancel" class="remodal-cancel">閉じる</button>
+                                </div>
+                                <img src="{% static 'images/top/ks_burger.jpeg' %}" alt="" />
                             </div>
                             <p class="works-name">K's Burgerのおすすめ商品</p>
                             <p class="works-info">Banner Design</p>
                         </a>
-                        <a class="works-item">
-                            <div class="works-img"><img src="{% static 'images/top/ksflower.jpeg' %}" alt="" />
+
+                        <a class="works-item" href="#modal_03" class="btn">
+                            <div class="works-img">
+                                <div class="remodal" data-remodal-id="modal_03">
+                                    <div><img src="{% static 'images/top/ksflower.jpeg' %}" alt="125naroom">
+                                    </div>
+                                    <button data-remodal-action="cancel" class="remodal-cancel">閉じる</button>
+                                </div>
+                                <img src="{% static 'images/top/ksflower.jpeg' %}" alt="" />
                             </div>
                             <p class="works-name">感謝の気持ちを伝えよう</p>
                             <p class="works-info">Banner Design</p>
                         </a>
-                        <a class="works-item">
-                            <div class="works-img"><img src="{% static 'images/top/k_net.jpeg' %}" alt="" />
+
+                        <a class="works-item" href="#modal_04" class="btn">
+                            <div class="works-img">
+                                <div class="remodal" data-remodal-id="modal_04">
+                                    <div><img src="{% static 'images/top/k_net.jpeg' %}" alt="125naroom">
+                                    </div>
+                                    <button data-remodal-action="cancel" class="remodal-cancel">閉じる</button>
+                                </div>
+                                <img src="{% static 'images/top/k_net.jpeg' %}" alt="" />
                             </div>
                             <p class="works-name">K NET光</p>
                             <p class="works-info">Banner Design</p>
                         </a>
-                        <a class="works-item">
-                            <div class="works-img"><img src="{% static 'images/top/soujiki.jpeg' %}" alt="" />
+
+                        <a class="works-item" href="#modal_05" class="btn">
+                            <div class="works-img">
+                                <div class="remodal" data-remodal-id="modal_05">
+                                    <div><img src="{% static 'images/top/soujiki.jpeg' %}" alt="125naroom">
+                                    </div>
+                                    <button data-remodal-action="cancel" class="remodal-cancel">閉じる</button>
+                                </div>
+                                <img src="{% static 'images/top/soujiki.jpeg' %}" alt="" />
                             </div>
                             <p class="works-name">Vacuum Cleaner</p>
                             <p class="works-info">Banner Design</p>
                         </a>
-                        <a class="works-item">
-                            <div class="works-img"><img src="{% static 'images/top/doubutuen.jpeg' %}" alt="" />
+
+                        <a class="works-item" href="#modal_06" class="btn">
+                            <div class="works-img">
+                                <div class="remodal" data-remodal-id="modal_06">
+                                    <div><img src="{% static 'images/top/doubutuen.jpeg' %}" alt="125naroom">
+                                    </div>
+                                    <button data-remodal-action="cancel" class="remodal-cancel">閉じる</button>
+                                </div>
+                                <img src="{% static 'images/top/doubutuen.jpeg' %}" alt="" />
                             </div>
                             <p class="works-name">わくわく動物園</p>
                             <p class="works-info">Banner Design</p>
                         </a>
+
                     </div>
                 </div>
             </section>
@@ -239,11 +350,12 @@
                         </a>
                         <!-- twitter -->
                         <a class="contact-item" href="https://twitter.com/JinMo51073" target="_blank">
-                        <i class="fa-brands fa-square-twitter fa-4x" style="color: #74C0FC; padding-right: 10px"></i>
+                            <i class="fa-brands fa-square-twitter fa-4x"
+                                style="color: #74C0FC; padding-right: 10px"></i>
                         </a>
                         <!-- github -->
                         <a class="contact-item" href="https://github.com/maokaneko?tab=repositories" target="_blank">
-                        <i class="fa-brands fa-square-github fa-4x" style="color: #000000; padding-right: 10px"></i>
+                            <i class="fa-brands fa-square-github fa-4x" style="color: #000000; padding-right: 10px"></i>
                         </a>
 
                         <!-- <a class="contact-item" href="https://github.com/mistake-git" target="_blank"><img src="{% static 'images/top/github_icon.png' %}"></a> -->
