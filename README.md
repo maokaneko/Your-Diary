@@ -22,8 +22,10 @@ URL : https://maokaneko.com/diary/top/
 <img width="611" src="https://github.com/maokaneko/Your-Diary/assets/141111818/85d118c8-2639-413b-8397-ed3658a15158">
 
 
-
 ## インフラ図
 <img width="668" src="https://github.com/maokaneko/Your-Diary/assets/141111818/15c762bd-faf3-4ab9-b0c5-62e3d09a4373">
 
+## ログイン情報
+* e-mail: maokaneko077@gmail.com
+* password: kaneko12345
 
